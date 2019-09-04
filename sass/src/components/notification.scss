@@ -25,6 +25,15 @@
   @include unitize(font-size, 20);
 }
 
+.js--notification .button {
+  background-color: $red;
+  color: $white;
+  @include unitize(padding, 17 112);
+  @include unitize(margin-top, 40);
+  @include appearance;
+  @include border($red, 2);
+}
+
 /******************* Tablet view *******************/
 @include media('>tablet', 'screen') {
 

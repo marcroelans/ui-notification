@@ -1,0 +1,32 @@
+
+// Default
+@mixin border($borderColor: $grey, $radius: 0) {
+  border-color: $borderColor;
+  border-style: solid;
+  @include unitize(border-radius, $radius);
+  @include unitize(border-width, 1);
+}
+
+@mixin border-top($borderTopColor: $grey) {
+  border-top-color: $borderTopColor;
+  border-top-style: solid;
+  @include unitize(border-top-width, 1);
+}
+
+@mixin border-right($borderRightColor: $grey) {
+  border-right-color: $borderRightColor;
+  border-right-style: solid;
+  @include unitize(border-right-width, 1);
+}
+
+@mixin border-bottom($borderBottomColor: $grey) {
+  border-bottom-color: $borderBottomColor;
+  border-bottom-style: solid;
+  @include unitize(border-bottom-width, 1);
+}
+
+@mixin border-left($borderLeftColor: $grey) {
+  border-left-color: $borderLeftColor;
+  border-left-style: solid;
+  @include unitize(border-left-width, 1);
+}

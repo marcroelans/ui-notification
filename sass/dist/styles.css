@@ -450,6 +450,24 @@ th {
   font-size: 1.25rem;
 }
 
+.js--notification .button {
+  background-color: #f50057;
+  color: white;
+  padding: 17px 112px;
+  padding: 1.0625rem 7rem;
+  margin-top: 40px;
+  margin-top: 2.5rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-color: #f50057;
+  border-style: solid;
+  border-radius: 2px;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  border-width: 0.0625rem;
+}
+
 /******************* Tablet view *******************/
 @media screen and (min-width: 48rem) {
   /** Vars **/
