@@ -1,58 +1,77 @@
 import { h } from 'create-element-lib';
 
 class Notification {
-  constructor(title, subtitle, root = document.querySelector('body'), options = {}) {
+  constructor(title, subtitle, options = {}) {
 
     if (!title || !subtitle) {
       throw new Error('Cannot create component Notification');
     }
-
     this.title = title;
     this.subtitle = subtitle;
-    this.options = options;
-    this.notification = null;
-    this.root = root;
+    this.options = this.applyOptions(options);
+    this.template = null;
 
-    this.createNotification();
+
+    this.createTemplate();
     this.render();
   }
 
-  createNotification() {
-    this.notification = h('div', {class: 'js--notification'}, [
+  applyOptions(options) {
+    const defaultOption = {
+      root: document.querySelector('body'),
+      shadow: false,
+      closable: true,
+      duration: null
+    }
+
+    return Object.assign({}, defaultOption, options);
+  }
+
+  createTemplate() {
+    let shadow;
+    let button;
+
+    if (this.options.shadow) {
+      shadow = h('div', {class: 'shadow'});
+    }
+
+    if (this.options.closable) {
+      button = h('button', {class: 'button', click: () => {
+        this.destroy();
+      }}, ['Schließen']);
+    }
+
+    this.template = h('div', {class: 'js--notification'}, [
+      shadow,
       h('div', {class: 'box'}, [
         h('p', {class: 'title'}, [ this.title ]),
-        h('p', {class: 'subtitle'}, [ this.subtitle ])
+        h('p', {class: 'subtitle'}, [ this.subtitle ]),
+        button
       ])
     ]);
   }
 
   render() {
-    if(this.notification){
-      this.root.appendChild(this.notification);
-
-      var elNotification = document.querySelectorAll('js--notification');
-      elNotification.forEach(function (item){
-        console.log(item);
-        item.classList.add("is-active");
-      });
+    if (!this.template || !this.options.root){
+      return;
     }
-    setTimeout(() => {
-      this.destroy();
-    }, 3000);
+
+    this.options.root.appendChild(this.template);
+
+    if (this.options.duration > 0) {
+      setTimeout(() => {
+        this.destroy();
+      }, this.options.duration);
+    }
+
   }
 
   destroy() {
-    if(this.notification){
-
-      var elNotification = document.querySelectorAll('js--notification');
-      elNotification.forEach(function (item){
-        item.classList.remove("is-active");
-      });
-
-      setTimeout(() => {
-        this.notification.parentElement.removeChild(this.notification);
-      }, 350);
+    if(!this.template){
+      return;
     }
+
+    this.template.parentElement.removeChild(this.template);
   }
 }
 

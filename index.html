@@ -17,7 +17,9 @@
       const button = document.querySelector('.js--button');
 
       button.addEventListener('click', function(){
-        const notification = new UiNotifcation.Notification('Das ist der Titel einer Notification','Das ist der Subtitel einer Notification');
+        const notification = new UiNotifcation.Notification('Das ist der Titel einer Notification','Das ist der Subtitel einer Notification', {
+          shadow: true
+        });
       });
 
     </script>

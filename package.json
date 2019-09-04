@@ -38,6 +38,6 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
-    "create-element-lib": "^0.1.1"
+    "create-element-lib": "^0.2.0"
   }
 }

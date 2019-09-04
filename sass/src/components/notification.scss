@@ -5,7 +5,7 @@
   top: 0;
   left: 50%;
   z-index: 99999;
-  @include transform(translate(-50%, -110%));
+  @include transform(translateX(-50%,));
   @include unitize(padding, 40 140);
   @include unitize(border-radius, 2);
   @include drop-shadow(3, 3, 6, 0, 0.25);
