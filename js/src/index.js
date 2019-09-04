@@ -1,1 +1,3 @@
-console.log('Hello World');
+import Notification from './notification';
+
+export { Notification }

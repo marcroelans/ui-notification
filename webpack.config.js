@@ -21,6 +21,8 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
+    library: 'UiNotifcation',
+    libraryTarget: 'umd',
     path: path.resolve(__dirname, './js/dist'),
     filename: 'bundle.js'
   }

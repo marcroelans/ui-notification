@@ -1,0 +1,20 @@
+/**
+  *
+  * @import all files
+  */
+
+/**
+  * This is the main file
+  */
+
+/* core mixins */
+@import 'mixins/index';
+
+/* variables */
+@import 'variables/index';
+
+/* global styles */
+@import 'normalize';
+
+/* components */
+@import 'components/index';

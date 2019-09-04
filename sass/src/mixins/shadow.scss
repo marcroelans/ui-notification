@@ -1,0 +1,36 @@
+@mixin text-shadow ($string) {
+  text-shadow: $string;
+}
+@mixin box-shadow ($string) {
+  -webkit-box-shadow: $string;
+  -moz-box-shadow:    $string;
+  box-shadow:         $string;
+}
+@mixin drop-shadow ($x: 0, $y: 10, $blur: 10, $spread: 0, $alpha: 0.1) {
+  $xRemValue: ($x / 16);
+  $yRemValue: ($y / 16);
+  $blurRemValue: ($blur / 16);
+  $spreadRemValue: ($spread / 16);
+
+  -webkit-box-shadow: #{$x}px #{$y}px #{$blur}px #{$spread}px rgba(0, 0, 0, $alpha);
+  -moz-box-shadow:	  #{$x}px #{$y}px #{$blur}px #{$spread}px rgba(0, 0, 0, $alpha);
+  box-shadow:		      #{$x}px #{$y}px #{$blur}px #{$spread}px rgba(0, 0, 0, $alpha);
+
+  -webkit-box-shadow: #{$xRemValue}rem #{$yRemValue}rem #{$blurRemValue}rem #{$spreadRemValue}rem rgba(0, 0, 0, $alpha);
+  -moz-box-shadow:	  #{$xRemValue}rem #{$yRemValue}rem #{$blurRemValue}rem #{$spreadRemValue}rem rgba(0, 0, 0, $alpha);
+  box-shadow:		      #{$xRemValue}rem #{$yRemValue}rem #{$blurRemValue}rem #{$spreadRemValue}rem rgba(0, 0, 0, $alpha);
+}
+@mixin inner-shadow ($x: 0, $y: 10, $blur: 10, $spread: 0, $alpha: 0.1) {
+  $xRemValue: ($x / 16);
+  $yRemValue: ($y / 16);
+  $blurRemValue: ($blur / 16);
+  $spreadRemValue: ($spread / 16);
+
+  -webkit-box-shadow: inset #{$x}px #{$y}px #{$blur}px #{$spread}px rgba(0, 0, 0, $alpha);
+  -moz-box-shadow:    inset #{$x}px #{$y}px #{$blur}px #{$spread}px rgba(0, 0, 0, $alpha);
+  box-shadow:         inset #{$x}px #{$y}px #{$blur}px #{$spread}px rgba(0, 0, 0, $alpha);
+
+  -webkit-box-shadow: inset #{$xRemValue}rem #{$yRemValue}rem #{$blurRemValue}rem #{$spreadRemValue}rem rgba(0, 0, 0, $alpha);
+  -moz-box-shadow:	  inset #{$xRemValue}rem #{$yRemValue}rem #{$blurRemValue}rem #{$spreadRemValue}rem rgba(0, 0, 0, $alpha);
+  box-shadow:		      inset #{$xRemValue}rem #{$yRemValue}rem #{$blurRemValue}rem #{$spreadRemValue}rem rgba(0, 0, 0, $alpha);
+}

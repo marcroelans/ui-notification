@@ -3,10 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link type="text/css" rel="stylesheet" href="sass/dist/styles.css">
   </head>
   <body>
+    <button class="js--button">Click me1</button>
+    <button class="js--button">Click me2</button>
+    <button class="js--button">Click me3</button>
+    <button class="js--button">Click me4</button>
 
     <script src="js/dist/bundle.js"></script>
+
+    <script>
+      const button = document.querySelector('.js--button');
+
+      button.addEventListener('click', function(){
+        const notification = new UiNotifcation.Notification('Das ist der Titel einer Notification','Das ist der Subtitel einer Notification');
+      });
+
+    </script>
 
   </body>
 </html>

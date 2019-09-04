@@ -1,0 +1,42 @@
+/******************* Global view *******************/
+.js--notification .box {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 50%;
+  z-index: 99999;
+  @include transform(translate(-50%, -110%));
+  @include unitize(padding, 40 140);
+  @include unitize(border-radius, 2);
+  @include drop-shadow(3, 3, 6, 0, 0.25);
+  @include transition(0.35s ease-in-out);
+}
+
+.js--notification.is-active .box {
+  @include transform(translate(-50%, 0%));
+}
+
+.js--notification .title {
+  @include unitize(font-size, 24);
+}
+
+.js--notification .subtitle {
+  color: $turkis;
+  @include unitize(font-size, 20);
+}
+
+/******************* Tablet view *******************/
+@include media('>tablet', 'screen') {
+
+  /** Vars **/
+
+}
+
+/******************* Desktop view *******************/
+@include media('>desktop', 'screen') {
+
+  /** Vars **/
+
+
+
+}
