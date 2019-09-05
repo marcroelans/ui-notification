@@ -43,19 +43,3 @@
   height: 100%;
   background-color: $shadow;
 }
-
-/******************* Tablet view *******************/
-@include media('>tablet', 'screen') {
-
-  /** Vars **/
-
-}
-
-/******************* Desktop view *******************/
-@include media('>desktop', 'screen') {
-
-  /** Vars **/
-
-
-
-}

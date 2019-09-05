@@ -478,13 +478,31 @@ th {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/******************* Tablet view *******************/
-@media screen and (min-width: 48rem) {
-  /** Vars **/
+/* elements */
+/******************* Global view *******************/
+.nm-ui-notifications {
+  position: relative;
+  height: 100vh;
 }
-/******************* Desktop view *******************/
-@media screen and (min-width: 75rem) {
-  /** Vars **/
+
+.nm-ui-notifications .inner {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 1200px;
+  width: 75rem;
+  padding-left: 10px;
+  padding-left: 0.625rem;
+  padding-right: 10px;
+  padding-right: 0.625rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
