@@ -6,23 +6,71 @@
     <link type="text/css" rel="stylesheet" href="sass/dist/styles.css">
   </head>
   <body>
-    <button class="js--button">Click me1</button>
-    <button class="js--button">Click me2</button>
-    <button class="js--button">Click me3</button>
-    <button class="js--button">Click me4</button>
+    <button class="js--button" id="button1">Click me1</button>
+    <button class="js--button" id="button2">Click me2</button>
+    <button class="js--button" id="button3">Click me3</button>
+    <button class="js--button" id="button4">Click me4</button>
 
     <script src="js/dist/bundle.js"></script>
 
     <script>
-      const button = document.querySelector('.js--button');
+          const buttons = [].slice.call(document.querySelectorAll('.js--button'));
 
-      button.addEventListener('click', function(){
-        const notification = new UiNotifcation.Notification('Das ist der Titel einer Notification','Das ist der Subtitel einer Notification', {
-          shadow: true
-        });
-      });
+          buttons.forEach((button) => {
+            button.addEventListener('click', function() {
+              if(!document.querySelector('.box')) {
+                if(button.id == 'button1') {
+                  const notification = new UiNotifcation.Notification('Das ist der Titel einer Notification','Das ist der Subtitel einer Notification', {
+                    shadow: false,
+                    closable: true,
+                    afterRender: function(_this, template) {
+                      setTimeout(() => {
+                        template.classList.add('is-active');
+                      }, 10)
+                    }
+                  });
+                }
 
+                if(button.id == 'button2') {
+                  const notification = new UiNotifcation.Notification('Das ist der Titel einer Notification','Das ist der Subtitel einer Notification', {
+                    shadow: true,
+                    closable: true,
+                    afterRender: function(_this, template) {
+                      setTimeout(() => {
+                        template.classList.add('is-active');
+                      }, 10)
+                    }
+                  });
+                }
+
+                if(button.id == 'button3') {
+                  const notification = new UiNotifcation.Notification('Das ist der Titel einer Notification','Das ist der Subtitel einer Notification', {
+                    shadow: false,
+                    closable: false,
+                    duration: 3500,
+                    afterRender: function(_this, template) {
+                      setTimeout(() => {
+                        template.classList.add('is-active');
+                      }, 10)
+                    }
+                  });
+                }
+
+                if(button.id == 'button4') {
+                  const notification = new UiNotifcation.Notification('Das ist der Titel einer Notification','Das ist der Subtitel einer Notification', {
+                    shadow: true,
+                    closable: false,
+                    duration: 3500,
+                    afterRender: function(_this, template) {
+                      setTimeout(() => {
+                        template.classList.add('is-active');
+                      }, 10)
+                    }
+                  });
+                }
+              }
+            });
+          });
     </script>
-
   </body>
 </html>

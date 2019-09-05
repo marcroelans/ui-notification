@@ -56,7 +56,15 @@ class Notification {
       return;
     }
 
+    if (this.options.beforeRender) {
+      this.options.beforeRender(this, this.template);
+    }
+
     this.options.root.appendChild(this.template);
+
+    if (this.options.afterRender) {
+      this.options.afterRender(this, this.template);
+    }
 
     if (this.options.duration > 0) {
       setTimeout(() => {
@@ -67,11 +75,19 @@ class Notification {
   }
 
   destroy() {
-    if(!this.template){
+    if(!this.template) {
       return;
     }
 
+    if(this.options.beforeDestroy) {
+
+    }
+
     this.template.parentElement.removeChild(this.template);
+
+    if(this.options.afterDestroy) {
+
+    }
   }
 }
 

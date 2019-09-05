@@ -415,10 +415,11 @@ th {
   text-align: center;
   top: 0;
   left: 50%;
+  background-color: white;
   z-index: 99999;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -110%);
+  -ms-transform: translate(-50%, -110%);
+  transform: translate(-50%, -110%);
   padding: 40px 140px;
   padding: 2.5rem 8.75rem;
   border-radius: 2px;
@@ -466,6 +467,15 @@ th {
   border-radius: 0.125rem;
   border-width: 1px;
   border-width: 0.0625rem;
+}
+
+.js--notification .shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /******************* Tablet view *******************/

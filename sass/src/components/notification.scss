@@ -4,8 +4,9 @@
   text-align: center;
   top: 0;
   left: 50%;
+  background-color: $white;
   z-index: 99999;
-  @include transform(translateX(-50%,));
+  @include transform(translate(-50%,-110%));
   @include unitize(padding, 40 140);
   @include unitize(border-radius, 2);
   @include drop-shadow(3, 3, 6, 0, 0.25);
@@ -32,6 +33,15 @@
   @include unitize(margin-top, 40);
   @include appearance;
   @include border($red, 2);
+}
+
+.js--notification .shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $shadow;
 }
 
 /******************* Tablet view *******************/
