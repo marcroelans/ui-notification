@@ -480,6 +480,15 @@ th {
 
 /* elements */
 /******************* Global view *******************/
+.nm-ui-notifications h2 {
+  padding-top: 50px;
+  padding-top: 3.125rem;
+  padding-left: 50px;
+  padding-left: 3.125rem;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
 .nm-ui-notifications {
   position: relative;
   height: 100vh;
@@ -503,6 +512,39 @@ th {
   padding-left: 0.625rem;
   padding-right: 10px;
   padding-right: 0.625rem;
+}
+
+.nm-ui-notifications .js--button {
+  outline: 0;
+  color: white;
+  background-color: #00b0b9;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 10px;
+  margin-left: 0.625rem;
+  border-color: #00b0b9;
+  border-style: solid;
+  border-radius: 2px;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  border-width: 0.0625rem;
+  padding-left: 10px;
+  padding-left: 0.625rem;
+  padding-right: 10px;
+  padding-right: 0.625rem;
+  height: 50px;
+  height: 3.125rem;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 50px;
+  line-height: 3.125rem;
+}
+
+.nm-ui-notifications .js--button:first-child {
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

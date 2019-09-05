@@ -1,4 +1,10 @@
 /******************* Global view *******************/
+.nm-ui-notifications h2 {
+  @include unitize(padding-top, 50);
+  @include unitize(padding-left, 50);
+  @include unitize(font-size, 30);
+}
+
 .nm-ui-notifications {
   position: relative;
   height: 100vh;
@@ -13,4 +19,22 @@
   @include unitize(width, 1200);
   @include unitize(padding-left, 10);
   @include unitize(padding-right, 10);
+}
+
+.nm-ui-notifications .js--button {
+  outline: 0;
+  color: $white;
+  background-color: $turkis;
+  @include flex(1);
+  @include unitize(margin-left, 10);
+  @include border($turkis, 2);
+  @include unitize(padding-left, 10);
+  @include unitize(padding-right, 10);
+  @include unitize(height, 50);
+  @include unitize(font-size, 16);
+  @include unitize(line-height, 50);
+}
+
+.nm-ui-notifications .js--button:first-child{
+  margin-left: 0;
 }
