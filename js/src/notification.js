@@ -80,6 +80,9 @@ class Notification {
       return;
     }
 
+    if (this.options.beforeDestroy) {
+      this.options.beforeDestroy(this, this.template);
+    }
 
     if (this.shouldDestroy) {
       this.template.parentElement.removeChild(this.template);
@@ -87,7 +90,7 @@ class Notification {
 
 
     if(this.options.afterDestroy) {
-
+      this.options.afterDestroy(this);
     }
   }
 }
