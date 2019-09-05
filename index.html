@@ -6,10 +6,10 @@
     <link type="text/css" rel="stylesheet" href="sass/dist/styles.css">
   </head>
   <body>
-    <button class="js--button" id="button1">Click me1</button>
-    <button class="js--button" id="button2">Click me2</button>
-    <button class="js--button" id="button3">Click me3</button>
-    <button class="js--button" id="button4">Click me4</button>
+    <button class="js--button" id="button1">Toogle closable Notification</button>
+    <button class="js--button" id="button2">Toogle closable Notification</button>
+    <button class="js--button" id="button3">Toogle selfdestructive Notification</button>
+    <button class="js--button" id="button4">Toogle selfdesturctive Notification</button>
 
     <script src="js/dist/bundle.js"></script>
 
@@ -51,6 +51,18 @@
                       setTimeout(() => {
                         template.classList.add('is-active');
                       }, 10)
+                    },
+                    beforeDestroy: function(_this, template) {
+                      if (!template.classList.contains('is-active')) {
+                        return;
+                      }
+
+                      _this.options.shouldDestroy = false;
+                      template.classList.remove('is-active');
+                      template.addEventListener('transitionend', () => {
+                        _this.options.shouldDestroy = true;
+                        _this.destroy();
+                      });
                     }
                   });
                 }
@@ -64,6 +76,18 @@
                       setTimeout(() => {
                         template.classList.add('is-active');
                       }, 10)
+                    },
+                    beforeDestroy: function(_this, template) {
+                      if (!template.classList.contains('is-active')) {
+                        return;
+                      }
+
+                      _this.options.shouldDestroy = false;
+                      template.classList.remove('is-active');
+                      template.addEventListener('transitionend', () => {
+                        _this.options.shouldDestroy = true;
+                        _this.destroy();
+                      });
                     }
                   });
                 }
@@ -77,6 +101,18 @@
                       setTimeout(() => {
                         template.classList.add('is-active');
                       }, 10)
+                    },
+                    beforeDestroy: function(_this, template) {
+                      if (!template.classList.contains('is-active')) {
+                        return;
+                      }
+
+                      _this.options.shouldDestroy = false;
+                      template.classList.remove('is-active');
+                      template.addEventListener('transitionend', () => {
+                        _this.options.shouldDestroy = true;
+                        _this.destroy();
+                      });
                     }
                   });
                 }
