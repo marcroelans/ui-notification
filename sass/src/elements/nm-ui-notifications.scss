@@ -22,12 +22,12 @@
 }
 
 .nm-ui-notifications .js--button {
-  outline: 0;
+  outline: 0; //outline focus removed
   color: $white;
   background-color: $turkis;
   @include flex(1);
   @include unitize(margin-left, 10);
-  @include border($turkis, 2);
+  @include border($turkis, 2); //border with border radius 2
   @include unitize(padding-left, 10);
   @include unitize(padding-right, 10);
   @include unitize(height, 50);
@@ -35,6 +35,6 @@
   @include unitize(line-height, 50);
 }
 
-.nm-ui-notifications .js--button:first-child{
+.nm-ui-notifications .js--button:first-child{ //styles for first child only
   margin-left: 0;
 }
