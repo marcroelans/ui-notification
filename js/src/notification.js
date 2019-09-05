@@ -21,7 +21,8 @@ class Notification {
       root: document.querySelector('body'),
       shadow: false,
       closable: true,
-      duration: null
+      duration: null,
+      shouldDestroy: true
     }
 
     return Object.assign({}, defaultOption, options);
@@ -79,11 +80,11 @@ class Notification {
       return;
     }
 
-    if(this.options.beforeDestroy) {
 
+    if (this.shouldDestroy) {
+      this.template.parentElement.removeChild(this.template);
     }
 
-    this.template.parentElement.removeChild(this.template);
 
     if(this.options.afterDestroy) {
 
