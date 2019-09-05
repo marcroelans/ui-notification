@@ -84,7 +84,7 @@ class Notification {
       this.options.beforeDestroy(this, this.template);
     }
 
-    if (this.shouldDestroy) {
+    if (this.options.shouldDestroy) {
       this.template.parentElement.removeChild(this.template);
     }
 
