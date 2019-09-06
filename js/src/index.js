@@ -13,4 +13,4 @@ const init = (title, subtitle, config = {}) => new Notification(
   config,
 );
 
-export default init;
+export { init };
