@@ -24,6 +24,6 @@ module.exports = {
     library: 'UiNotifcation',
     libraryTarget: 'umd',
     path: path.resolve(__dirname, './js/dist'),
-    filename: 'bundle.js'
+    filename: 'ui-notification.js'
   }
 };
