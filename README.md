@@ -4,9 +4,9 @@
 
 Ui-Notification is a simple vanilla js component for simple messages in the browser.
 
-# Install / Import
+##Install / Import
 
-## via npm
+### via npm
 
 Install the package
 ``` sh
@@ -18,7 +18,7 @@ import { init as UiNotifcationInit } from '@neuland-agentur/ui-notification';
 ```
 
 
-## via script
+### via script
 
 Download the file **ui-notification.js** in the `js/dist/` folder and place it into your html file.
 
