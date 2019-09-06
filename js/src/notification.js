@@ -1,14 +1,14 @@
 import { h } from 'create-element-lib';
 
 class Notification {
-  constructor(title, subtitle, options = {}) {
-
+  constructor(title, subtitle, config = {}) {
     if (!title || !subtitle) {
       throw new Error('Cannot create component Notification');
     }
     this.title = title;
     this.subtitle = subtitle;
-    this.options = this.applyOptions(options);
+    this.config = config;
+    this.options = this.applyOptions();
     this.template = null;
 
 
@@ -16,16 +16,16 @@ class Notification {
     this.render();
   }
 
-  applyOptions(options) {
+  applyOptions() {
     const defaultOption = {
       root: document.querySelector('body'),
       shadow: false,
       closable: true,
       duration: null,
-      shouldDestroy: true
-    }
+      shouldDestroy: true,
+    };
 
-    return Object.assign({}, defaultOption, options);
+    return Object.assign({}, defaultOption, this.config);
   }
 
   createTemplate() {
@@ -33,27 +33,30 @@ class Notification {
     let button;
 
     if (this.options.shadow) {
-      shadow = h('div', {class: 'shadow'});
+      shadow = h('div', { class: 'shadow' });
     }
 
     if (this.options.closable) {
-      button = h('button', {class: 'button', click: () => {
-        this.destroy();
-      }}, ['Schließen']);
+      button = h('button', {
+        class: 'button',
+        click: () => {
+          this.destroy();
+        },
+      }, ['Schließen']);
     }
 
-    this.template = h('div', {class: 'js--notification'}, [
+    this.template = h('div', { class: 'js--notification' }, [
       shadow,
-      h('div', {class: 'box'}, [
-        h('p', {class: 'title'}, [ this.title ]),
-        h('p', {class: 'subtitle'}, [ this.subtitle ]),
-        button
-      ])
+      h('div', { class: 'box' }, [
+        h('p', { class: 'title' }, [this.title]),
+        h('p', { class: 'subtitle' }, [this.subtitle]),
+        button,
+      ]),
     ]);
   }
 
   render() {
-    if (!this.template || !this.options.root){
+    if (!this.template || !this.options.root) {
       return;
     }
 
@@ -72,11 +75,10 @@ class Notification {
         this.destroy();
       }, this.options.duration);
     }
-
   }
 
   destroy() {
-    if(!this.template) {
+    if (!this.template) {
       return;
     }
 
@@ -89,7 +91,7 @@ class Notification {
     }
 
 
-    if(this.options.afterDestroy) {
+    if (this.options.afterDestroy) {
       this.options.afterDestroy(this);
     }
   }
