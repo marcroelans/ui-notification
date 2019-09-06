@@ -10,11 +10,11 @@ Ui-Notification is a simple vanilla js component for simple messages in the brow
 
 Install the package
 ``` sh
-npm install @neuland-agentur/ui-notification --save
+npm i ui-notification --save
 ```
 
 ``` javascript
-import { init as UiNotifcationInit } from '@neuland-agentur/ui-notification';
+import { init as UiNotifcationInit } from 'ui-notification';
 ```
 
 
