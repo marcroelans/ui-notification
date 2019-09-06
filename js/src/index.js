@@ -7,6 +7,10 @@ import Notification from './notification';
  * @param {Object} config
  * @return {Class}
  */
-const init = (title, subtitle, config = {}) => new Notification(title, subtitle, config = {});
+const init = (title, subtitle, config = {}) => new Notification(
+  title,
+  subtitle,
+  config,
+);
 
 export default init;

@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _notification__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./notification */ \"./js/src/notification.js\");\n\n/**\n * init a notification\n * @param {String} title\n * @param {String} subtitle\n * @param {Object} config\n * @return {Class}\n */\n\nvar init = function init(title, subtitle) {\n  var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};\n  return new _notification__WEBPACK_IMPORTED_MODULE_0__[\"default\"](title, subtitle, config = {});\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (init);\n\n//# sourceURL=webpack://UiNotifcation/./js/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _notification__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./notification */ \"./js/src/notification.js\");\n\n/**\n * init a notification\n * @param {String} title\n * @param {String} subtitle\n * @param {Object} config\n * @return {Class}\n */\n\nvar init = function init(title, subtitle) {\n  var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};\n  return new _notification__WEBPACK_IMPORTED_MODULE_0__[\"default\"](title, subtitle, config);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (init);\n\n//# sourceURL=webpack://UiNotifcation/./js/src/index.js?");
 
 /***/ }),
 
