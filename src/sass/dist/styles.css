@@ -408,12 +408,20 @@ th {
 /* elements */
 /******************* Global view *******************/
 .nm-ui-notifications h2 {
+  color: #3d4548;
+  font-weight: bold;
   padding-top: 50px;
   padding-top: 3.125rem;
   padding-left: 50px;
   padding-left: 3.125rem;
-  font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 70px;
+  font-size: 4.375rem;
+}
+@media (min-width: 768px) {
+  .nm-ui-notifications h2 {
+    font-size: 100px;
+    font-size: 6.25rem;
+  }
 }
 
 .nm-ui-notifications {
@@ -427,30 +435,29 @@ th {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  width: 1200px;
-  width: 75rem;
-  padding-left: 10px;
-  padding-left: 0.625rem;
-  padding-right: 10px;
-  padding-right: 0.625rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+}
+@media (min-width: 1281px) {
+  .nm-ui-notifications .inner {
+    width: 1200px;
+    width: 75rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
 }
 
 .nm-ui-notifications .js--button {
+  display: block;
+  width: 100%;
   outline: 0;
   color: white;
   background-color: #00b0b9;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin-left: 10px;
-  margin-left: 0.625rem;
   border-color: #00b0b9;
   border-style: solid;
   border-radius: 2px;
@@ -467,10 +474,25 @@ th {
   font-size: 1rem;
   line-height: 50px;
   line-height: 3.125rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 1281px) {
+  .nm-ui-notifications .js--button {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: 10px;
+    margin-left: 0.625rem;
+  }
 }
 
-.nm-ui-notifications .js--button:first-child {
-  margin-left: 0;
+@media (min-width: 1281px) {
+  .nm-ui-notifications .js--button:first-child {
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
