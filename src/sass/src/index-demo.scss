@@ -2,11 +2,7 @@
   *
   * @import all files
   */
-
-/**
-  * This is the main file
-  */
-
+  
 /* core mixins */
 @import 'mixins/index';
 
@@ -15,9 +11,6 @@
 
 /* global styles */
 @import 'normalize';
-
-/* components */
-@import 'components/index';
 
 /* elements */
 @import 'elements/index';
