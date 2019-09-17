@@ -7,8 +7,8 @@
     "server": "webpack-dev-server --config webpack.config.js --open",
     "build": "node_modules/.bin/webpack",
     "watch": "node_modules/.bin/webpack --watch",
-    "styles-demo": "node_modules/.bin/sass src/sass/src/index-demo.scss src/sass/dist/styles.css --watch",
-    "styles-ui": "node_modules/.bin/sass src/sass/src/index.scss dist/ui-notifcation-styles.css --watch"
+    "styles-demo": "node_modules/.bin/sass src/sass/src/index-demo.scss src/sass/dist/styles.css --watch --style=compressed",
+    "styles-ui": "node_modules/.bin/sass src/sass/src/index.scss dist/ui-notifcation-styles.css --watch --style=compressed"
   },
   "repository": {
     "type": "git",
