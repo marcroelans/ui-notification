@@ -1,8 +1,13 @@
 /******************* Global view *******************/
 .nm-ui-notifications h2 {
+  color: $grey;
+  font-weight: bold;
   @include unitize(padding-top, 50);
   @include unitize(padding-left, 50);
-  @include unitize(font-size, 30);
+  @include unitize(font-size, 70);
+  @media (min-width: 768px) {
+    @include unitize(font-size, 100);
+  }
 }
 
 .nm-ui-notifications {
@@ -14,26 +19,35 @@
   top: 50%;
   left: 50%;
   @include transform(translate(-50%, -50%));
-  @include flexbox;
-  @include unitize(width, 1200);
-  @include unitize(padding-left, 10);
-  @include unitize(padding-right, 10);
+  @include unitize(padding-left, 20);
+  @include unitize(padding-right, 20);
+  @media (min-width: 1281px) {
+    @include unitize(width, 1200);
+    @include flexbox;
+  }
 }
 
 .nm-ui-notifications .js--button {
+  display: block;
+  width: 100%;
   outline: 0; //outline focus removed
   color: $white;
   background-color: $turkis;
-  @include flex(1);
-  @include unitize(margin-left, 10);
   @include border($turkis, 2); //border with border radius 2
   @include unitize(padding-left, 10);
   @include unitize(padding-right, 10);
   @include unitize(height, 50);
   @include unitize(font-size, 16);
   @include unitize(line-height, 50);
+  @include unitize(margin-bottom, 20);
+  @media (min-width: 1281px) {
+    @include flex(1);
+    @include unitize(margin-left, 10);
+  }
 }
 
 .nm-ui-notifications .js--button:first-child{ //styles for first child only
-  margin-left: 0;
+  @media (min-width: 1281px) {
+    margin-left: 0;
+  }
 }

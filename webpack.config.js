@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './js/src/index.js',
+  entry: './src/js/index.js',
   mode: 'development',
   module: {
     rules: [
@@ -23,7 +23,7 @@ module.exports = {
   output: {
     library: 'UiNotifcation',
     libraryTarget: 'umd',
-    path: path.resolve(__dirname, './js/dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: 'ui-notification.js'
   }
 };
