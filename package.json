@@ -17,9 +17,9 @@
   "author": "NEULAND. Medienagentur",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.6.4",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.6",
     "eslint": "^5.16.0",
@@ -27,10 +27,10 @@
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "sass": "^1.22.10",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "sass": "^1.23.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
     "create-element-lib": "^0.2.0"
